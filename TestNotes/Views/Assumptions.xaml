@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TestNotes.Views"
              xmlns:viewModels="clr-namespace:TestNotes.ViewModels"
+             xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
@@ -12,8 +13,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Name="lblAssumption" Margin="10 0 0 0" FontWeight="Bold"
-                   VerticalAlignment="Center">
+        <Label Name="lblAssumption">
             Assumptions
         </Label>
         <DataGrid Name="gridAssumptions" Grid.Row="1"

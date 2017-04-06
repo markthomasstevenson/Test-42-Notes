@@ -4,6 +4,30 @@
              xmlns:local="clr-namespace:TestNotes"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <!-- Accent and AppTheme setting -->
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style BasedOn="{StaticResource AzureDataGrid}" TargetType="DataGrid">
+               
+            </Style>
+            <Style BasedOn="{StaticResource MetroLabel}" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            </Style>
+            <Style BasedOn="{StaticResource MetroFlatButton}" TargetType="Button">
+                <Setter Property="Foreground" Value="#41B1E1"/>
+                <Setter Property="Background" Value="White"/>
+            </Style>
+            <Style BasedOn="{StaticResource MetroDataGridColumnHeader}" TargetType="DataGridColumnHeader">
+                <Setter Property="FontWeight" Value="Normal"></Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

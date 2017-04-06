@@ -10,8 +10,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Name="lblRegressionScenarios" Margin="10 0 0 0" FontWeight="Bold"
-                   VerticalAlignment="Center">
+        <Label Name="lblRegressionScenarios" >
             Regression Scenarios
         </Label>
         <DataGrid Name="gridRegressionScenarios" Grid.Row="1"

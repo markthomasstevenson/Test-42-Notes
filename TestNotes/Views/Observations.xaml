@@ -10,8 +10,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Label Name="lblObservation" Margin="10 0 0 0" FontWeight="Bold"
-                   VerticalAlignment="Center">
+        <Label Name="lblObservation" >
             Observations
         </Label>
         <DataGrid Name="gridObservations" Grid.Row="1"

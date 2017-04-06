@@ -14,9 +14,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/> <!-- Title -->
             <RowDefinition Height="3*"/> <!-- Assumptions -->
+            <RowDefinition Height="5"/>  <!-- Splitter -->
             <RowDefinition Height="3*"/> <!-- Observations -->
+            <RowDefinition Height="5"/> <!-- Splitter -->
             <RowDefinition Height="3*"/> <!-- Questions -->
+            <RowDefinition Height="5"/> <!-- Splitter -->
             <RowDefinition Height="3*"/> <!-- Bugs -->
+            <RowDefinition Height="5"/> <!-- Splitter -->
             <RowDefinition Height="3*"/> <!-- Regression Scenarios -->
             <RowDefinition Height="*"/> <!-- Controls -->
         </Grid.RowDefinitions>
@@ -26,19 +30,23 @@
         <Grid Name="Assumptions" Row="1">
             <local:Assumptions />
         </Grid>
-        <Grid Name="Observations" Row="2">
+        <GridSplitter Grid.Row="2" Height="5" HorizontalAlignment="Stretch"/>
+        <Grid Name="Observations" Row="3">
             <local:Observations />
         </Grid>
-        <Grid Name="Questions" Row="3">
+        <GridSplitter Grid.Row="4" Height="5" HorizontalAlignment="Stretch"/>
+        <Grid Name="Questions" Row="5">
             <local:QuestionAnswers />
         </Grid>
-        <Grid Name="Bugs" Row="4">
+        <GridSplitter Grid.Row="6" Height="5" HorizontalAlignment="Stretch"/>
+        <Grid Name="Bugs" Row="7">
             <local:Bugs />
         </Grid>
-        <Grid Name="RegressionScenarios" Row="5">
+        <GridSplitter Grid.Row="8" Height="5" HorizontalAlignment="Stretch"/>
+        <Grid Name="RegressionScenarios" Row="9">
             <local:RegressionScenarios />
         </Grid>
-        <Grid Name="Controls" Row="6">
+        <Grid Name="Controls" Row="10">
             <local:Controls />
         </Grid>
     </Grid>

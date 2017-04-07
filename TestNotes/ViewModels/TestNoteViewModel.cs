@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net.Mime;
 using System.Text;
+using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using TestNotes.Commands;
 using TestNotes.IO;
 using TestNotes.Models;
+using TestNotes.Views;
+using Clipboard = System.Windows.Forms.Clipboard;
+using TestNote = TestNotes.Models.TestNote;
 
 namespace TestNotes.ViewModels
 {
     public class TestNoteViewModel : _BaseViewModel
     {
         private TestNote _testNote = new TestNote();
-        
 
-        public TestNoteViewModel()
+        public TestNoteViewModel() : base()
         {
             Load();
         }

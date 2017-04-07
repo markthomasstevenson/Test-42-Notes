@@ -8,10 +8,14 @@
         xmlns:views="clr-namespace:TestNotes.Views"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d" xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:viewModels="clr-namespace:TestNotes.ViewModels"
         Deactivated="Window_Deactivated"
         WindowStartupLocation="CenterScreen"
-        Width="400" Height="800"
+        Width="400" Height="800" BorderThickness="2" BorderBrush="#0047ab"
         Title="Test-42: Test Notes">
+    <controls:MetroWindow.DataContext>
+        <viewModels:TestNoteViewModel />
+    </controls:MetroWindow.DataContext>
     <controls:MetroWindow.IconTemplate>
         <DataTemplate>
             <iconPacks:PackIconMaterial Kind="NoteText" Width="20"
@@ -20,6 +24,24 @@
                                         HorizontalAlignment="Center"/>
         </DataTemplate>
     </controls:MetroWindow.IconTemplate>
+    <controls:MetroWindow.RightWindowCommands>
+        <controls:WindowCommands>
+            <Button Command="{Binding LeftDockCommand}">
+                <iconPacks:PackIconMaterial Kind="FormatHorizontalAlignLeft" Width="20"
+                                        Height="20" Background="Transparent"
+                                        Foreground="White" VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ToolTip="{Binding LeftToolTipText, UpdateSourceTrigger=PropertyChanged}"/>
+            </Button>
+            <Button Command="{Binding RightDockCommand}">
+                <iconPacks:PackIconMaterial Kind="FormatHorizontalAlignRight" Width="20"
+                                        Height="20" Background="Transparent"
+                                        Foreground="White" VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ToolTip="{Binding RightToolTipText, UpdateSourceTrigger=PropertyChanged}"/>
+            </Button>
+        </controls:WindowCommands>
+    </controls:MetroWindow.RightWindowCommands>
     <Grid>
         <views:TestNote></views:TestNote>
     </Grid>

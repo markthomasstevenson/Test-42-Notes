@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -100,6 +100,8 @@
     <Compile Include="IO\Binary.cs" />
     <Compile Include="IO\Json.cs" />
     <Compile Include="IO\Xml.cs" />
+    <Compile Include="Libraries\AppBarFunctions.cs" />
+    <Compile Include="Libraries\Interop.cs" />
     <Compile Include="Models\Bug.cs" />
     <Compile Include="Models\RegressionScenario.cs" />
     <Compile Include="Models\QuestionAnswer.cs" />
@@ -112,6 +114,7 @@
     <Compile Include="Views\Controls.xaml.cs">
       <DependentUpon>Controls.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\IView.cs" />
     <Compile Include="Views\RegressionScenarios.xaml.cs">
       <DependentUpon>RegressionScenarios.xaml</DependentUpon>
     </Compile>

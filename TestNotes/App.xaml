@@ -11,7 +11,7 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
                 <!-- Accent and AppTheme setting -->
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Cobalt.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <Style BasedOn="{StaticResource AzureDataGrid}" TargetType="DataGrid">
@@ -19,14 +19,14 @@
             </Style>
             <Style BasedOn="{StaticResource MetroLabel}" TargetType="Label">
                 <Setter Property="FontSize" Value="14"/>
-                <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                <Setter Property="VerticalAlignment" Value="Center"/>
             </Style>
             <Style BasedOn="{StaticResource MetroFlatButton}" TargetType="Button">
-                <Setter Property="Foreground" Value="#41B1E1"/>
+                <Setter Property="Foreground" Value="#3373F2"/>
                 <Setter Property="Background" Value="White"/>
             </Style>
             <Style BasedOn="{StaticResource MetroDataGridColumnHeader}" TargetType="DataGridColumnHeader">
-                <Setter Property="FontWeight" Value="Normal"></Setter>
+                <Setter Property="FontWeight" Value="Normal"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>

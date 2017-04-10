@@ -181,18 +181,18 @@ namespace TestNotes.ViewModels
         private void CopyToClipboard()
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append("Ref: '" + _testNote.Ref + "'\n");
-            stringBuilder.Append("Title: '" + _testNote.Title + "'\n");
+            stringBuilder.Append("Ref: '" + _testNote.Ref + "'\n\n");
+            stringBuilder.Append("Title: '" + _testNote.Title + "'\n\n");
             stringBuilder.Append("Assumptions:\n");
-            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.Assumptions) + "'\n");
+            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.Assumptions) + "'\n\n");
             stringBuilder.Append("Observations:\n");
-            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.Observations) + "'\n");
+            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.Observations) + "'\n\n");
             stringBuilder.Append("Questions -> Answers:\n");
-            stringBuilder.Append(" - " + string.Join("\n - ", _testNote.Questions) + "\n");
+            stringBuilder.Append(" - " + string.Join("\n - ", _testNote.Questions) + "\n\n");
             stringBuilder.Append("Bugs:\n");
-            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.Bugs) + "'\n");
-            stringBuilder.Append("RegressionScenarios:\n");
-            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.RegressionScenarios) + "'\n");
+            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.Bugs) + "'\n\n");
+            stringBuilder.Append("Regression Scenarios:\n");
+            stringBuilder.Append(" - '" + string.Join("'\n - '", _testNote.RegressionScenarios));
 
             Clipboard.SetText(stringBuilder.ToString());
         }

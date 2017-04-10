@@ -15,7 +15,17 @@
         </Label>
         <DataGrid Name="gridObservations" Grid.Row="1"
                   ItemsSource="{Binding Path=Observations, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                  AutoGenerateColumns="True" ColumnWidth="*"  HeadersVisibility="None">
+                  AutoGenerateColumns="False" ColumnWidth="*"  HeadersVisibility="None">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Binding="{Binding Scenario, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <Setter Property="SpellCheck.IsEnabled" Value="True"/>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>

@@ -15,7 +15,27 @@
         </Label>
         <DataGrid Name="gridBugs" Grid.Row="1"
                   ItemsSource="{Binding Path=Bugs, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                  AutoGenerateColumns="True" ColumnWidth="*">
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Binding="{Binding Ref, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Width="0.5*" Header="Ref">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <Setter Property="SpellCheck.IsEnabled" Value="True"/>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn
+                    Binding="{Binding Summary, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Width="2*" Header="Summary">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox">
+                            <Setter Property="SpellCheck.IsEnabled" Value="True"/>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </UserControl>

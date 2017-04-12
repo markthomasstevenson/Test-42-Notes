@@ -43,3 +43,5 @@ c:\users\mark.stevenson\documents\visual studio 2017\Projects\Test-42\TestNotes\
 c:\users\mark.stevenson\documents\visual studio 2017\Projects\Test-42\TestNotes\TestNotes\bin\Debug\MahApps.Metro.IconPacks.dll
 c:\users\mark.stevenson\documents\visual studio 2017\Projects\Test-42\TestNotes\TestNotes\bin\Debug\MahApps.Metro.IconPacks.pdb
 c:\users\mark.stevenson\documents\visual studio 2017\Projects\Test-42\TestNotes\TestNotes\bin\Debug\MahApps.Metro.IconPacks.xml
+c:\users\mark.stevenson\documents\visual studio 2017\Projects\Test-42\TestNotes\TestNotes\obj\Debug\TestNotes_Content.g.cs
+c:\users\mark.stevenson\documents\visual studio 2017\Projects\Test-42\TestNotes\TestNotes\bin\Debug\Resources\Icons\bug.png

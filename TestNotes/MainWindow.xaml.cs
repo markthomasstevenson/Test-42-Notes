@@ -35,6 +35,13 @@ namespace TestNotes
             Topmost = true;
             ((TestNoteViewModel) DataContext).View = this;
             hook = new WindowLockHook(this);
+
+            var activationData = AppDomain.CurrentDomain.SetupInformation.ActivationArguments?.ActivationData;
+            if (!string.IsNullOrWhiteSpace(activationData?[0]))
+            {
+                var uri = new Uri(activationData[0]);
+                ((TestNoteViewModel) DataContext).LoadTestNote(uri.LocalPath);
+            }
         }
 
         protected override void OnClosing(CancelEventArgs e)

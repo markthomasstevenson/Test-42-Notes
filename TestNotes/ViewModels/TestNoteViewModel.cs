@@ -143,7 +143,8 @@ namespace TestNotes.ViewModels
             using (var dialog = new SaveFileDialog())
             {
                 dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                dialog.Filter = "Text File (*.txt)|*.txt";
+                dialog.Filter = "Test Note File (*.tnote)|*.tnote|All files (*.*)|*.*";
+                dialog.FileName = Ref + "_" + Title;
                 var result = dialog.ShowDialog();
                 if (result == DialogResult.OK || result == DialogResult.Yes)
                 {
@@ -163,14 +164,19 @@ namespace TestNotes.ViewModels
             {
                 dialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 dialog.Multiselect = false;
-                dialog.Filter = "Text File (*.txt)|*.txt";
+                dialog.Filter = "Test Note File (*.tnote)|*.tnote|All files (*.*)|*.*";
                 var result = dialog.ShowDialog();
-                if (result == DialogResult.OK || result == DialogResult.Yes)
+                if (result != DialogResult.OK && result != DialogResult.Yes)
                 {
-                    _testNote = Binary.ReadFromBinaryFile<TestNote>(dialog.FileName);
-                    Load();
+                    return;
                 }
+                LoadTestNote(dialog.FileName);
             }
+        }
+        public void LoadTestNote(string filePath)
+        {
+            _testNote = Binary.ReadFromBinaryFile<TestNote>(filePath);
+            Load();
         }
 
         private static bool CanCopy()
